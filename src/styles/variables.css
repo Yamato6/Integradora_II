@@ -1,0 +1,104 @@
+:root {
+
+    /* PRIMARY PALETTE */
+
+    --color-primary: #007BFF;
+    --color-primary-dark: #0069D9;
+    --color-primary-light: #E8F2FF;
+
+    --color-secondary: #5F6B7A;
+
+    --color-background: #FFFFFF;
+    --color-surface: #F2F4F7;
+    --color-panel: #E9ECEF;
+
+    --color-header: #1A1D20;
+
+    /* TEXT */
+
+    --color-text: #1A1D20;
+    --color-text-secondary: #5F6B7A;
+    --color-text-muted: #7B8794;
+    --color-text-inverse: #FFFFFF;
+
+    /* BORDERS */
+
+    --color-border: #E5E7EB;
+    --color-divider: #D9DEE5;
+
+    /* STATUS COLORS */
+
+    --color-success: #2EAF62;
+    --color-success-light: #EAF8F0;
+
+    --color-warning: #F6B73C;
+    --color-warning-light: #FFF8E5;
+
+    --color-error: #E5484D;
+    --color-error-light: #FDECEC;
+
+    --color-info: #007BFF;
+    --color-info-light: #E8F2FF;
+
+    /* SHADOWS */
+
+    --shadow-sm: 0 2px 6px rgba(0,0,0,.06);
+
+    --shadow-md: 0 4px 12px rgba(0,0,0,.08);
+
+    --shadow-lg: 0 8px 20px rgba(0,0,0,.12);
+
+    --shadow-hover: 0 10px 30px rgba(0,123,255,.18);
+
+    /* BORDER RADIUS */
+
+    --radius-sm: 8px;
+    --radius-md: 10px;
+    --radius-lg: 12px;
+    --radius-xl: 18px;
+    --radius-pill: 999px;
+
+    /* SPACING SCALE */
+
+    --space-1: 8px;
+    --space-2: 16px;
+    --space-3: 24px;
+    --space-4: 32px;
+    --space-5: 48px;
+    --space-6: 64px;
+    --space-7: 80px;
+
+    /* TYPOGRAPHY */
+
+    --font-heading: "Space Grotesk", "Outfit", sans-serif;
+    --font-body: "Inter", sans-serif;
+
+    /* FONT SIZES */
+
+    --display-size: 64px;
+
+    --h1: 48px;
+    --h2: 32px;
+    --h3: 20px;
+    --h4: 18px;
+
+    --body-lg: 18px;
+    --body: 16px;
+    --body-sm: 14px;
+    --caption: 13px;
+
+    /*ANIMATIONS*/
+
+    --transition-fast: .2s;
+    --transition-normal: .3s;
+    --transition-slow: .5s;
+
+    --ease-standard: ease-in-out;
+
+    --button-scale: 1.04;
+
+    --glow-primary:
+        0 0 8px rgba(0,123,255,.35),
+        0 0 18px rgba(0,123,255,.18);
+
+}

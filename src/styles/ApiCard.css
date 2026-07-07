@@ -1,0 +1,81 @@
+@import "./variables.css";
+
+/* API RESULT CARD */
+
+.api-card {
+
+    background: var(--color-panel);
+
+    border: 1px solid var(--color-border);
+
+    border-radius: var(--radius-lg);
+
+    padding: var(--space-4);
+
+    box-shadow: var(--shadow-sm);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+
+}
+
+.api-card:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow: var(--shadow-hover);
+
+}
+
+.api-card__header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: var(--space-3);
+
+}
+
+.api-card__title {
+
+    font-size: var(--h3);
+
+    font-family: var(--font-heading);
+
+}
+
+.api-card__source {
+
+    font-size: var(--caption);
+
+    color: var(--color-text-muted);
+
+    background: var(--color-primary-light);
+
+    padding: 6px 10px;
+
+    border-radius: var(--radius-pill);
+
+}
+
+.api-card__content {
+
+    display: grid;
+
+    gap: var(--space-2);
+
+}
+
+.api-card__actions {
+
+    margin-top: var(--space-3);
+
+    display: flex;
+
+    gap: var(--space-2);
+
+}

@@ -1,0 +1,81 @@
+@import "./variables.css";
+
+/* INFORMATION CARD */
+
+.info-card {
+
+    background: white;
+
+    border-radius: var(--radius-md);
+
+    border: 1px solid var(--color-border);
+
+    padding: var(--space-3);
+
+    display: flex;
+
+    gap: var(--space-3);
+
+    align-items: flex-start;
+
+    box-shadow: var(--shadow-sm);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+
+}
+
+.info-card:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: var(--shadow-md);
+
+}
+
+.info-card__icon {
+
+    width: 48px;
+
+    height: 48px;
+
+    border-radius: 50%;
+
+    display: grid;
+
+    place-items: center;
+
+    background: var(--color-primary-light);
+
+    color: var(--color-primary);
+
+    flex-shrink: 0;
+
+}
+
+.info-card__content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+}
+
+.info-card__title {
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+}
+
+.info-card__text {
+
+    color: var(--color-text-secondary);
+
+    line-height: 1.6;
+
+}

@@ -1,0 +1,113 @@
+@import "./variables.css";
+
+.badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    padding:6px 12px;
+
+    border-radius:999px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    text-transform:uppercase;
+
+    letter-spacing:.05em;
+
+    white-space:nowrap;
+
+    transition:
+        background .3s ease,
+        color .3s ease,
+        border-color .3s ease,
+        transform .3s ease;
+
+}
+
+/* DEFAULT */
+
+.badge-default{
+
+    background:var(--color-panel);
+
+    color:var(--color-text);
+
+}
+
+/* PRIMARY */
+
+.badge-primary{
+
+    background:var(--color-primary-light);
+
+    color:var(--color-primary);
+
+}
+
+/* SUCCESS */
+
+.badge-success{
+
+    background:var(--color-success-light);
+
+    color:var(--color-success);
+
+}
+
+/* WARNING */
+
+.badge-warning{
+
+    background:var(--color-warning-light);
+
+    color:var(--color-warning);
+
+}
+
+/* ERROR */
+
+.badge-error{
+
+    background:var(--color-error-light);
+
+    color:var(--color-error);
+
+}
+
+/* LIVE */
+
+.badge-live{
+
+    background:rgba(46,175,98,.15);
+
+    color:var(--color-success);
+
+    animation:livePulse 2s infinite;
+
+}
+
+/* OUTLINE */
+
+.badge-outline{
+
+    background:transparent;
+
+    border:1px solid var(--color-border);
+
+    color:var(--color-text-secondary);
+
+}
+
+.badge:hover{
+
+    transform:translateY(-2px);
+
+}
