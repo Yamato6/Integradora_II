@@ -1,0 +1,12 @@
+.img-2 {
+  overflow: hidden;
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+}
+
+.img-2__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}

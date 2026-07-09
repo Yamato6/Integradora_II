@@ -1,0 +1,6 @@
+.text-2 {
+  margin: 0;
+  font: inherit;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
