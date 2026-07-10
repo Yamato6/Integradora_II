@@ -7,15 +7,20 @@ git clone https://github.com/Yamato6/Integradora_ll.git
 cd Integradora_ll
 
 Note: Remember to execute your dependency installations (such as npm install) inside the appropriate directories before initiating the local runtime environments.
-2. Branching Strategy and Workflow
+
+2. Branching Strategy and Workflow 
 The project operates under a modular branching strategy to prevent merge conflicts. Direct contributions to the main structural lines are restricted. Developers must isolate features within specific development branches derived from the core branch.
+
 To create and immediately switch to a specialized development branch, utilize the following sequence:
 Bash
 Ensure your local environment possesses the latest reference updates
+
 git checkout main
+
 git pull origin main
 
 Allocate a new isolated branch for your specific task
+
 git checkout -b feature/your-name-task-description
 
 3. Staging and Committing Changes
