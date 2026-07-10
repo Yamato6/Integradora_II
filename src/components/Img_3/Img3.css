@@ -1,0 +1,12 @@
+.img-3 {
+  overflow: hidden;
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+}
+
+.img-3__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}

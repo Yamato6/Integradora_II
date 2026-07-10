@@ -1,0 +1,13 @@
+.link-1 {
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  font: inherit;
+  font-weight: 600;
+}
+
+.link-1__text {
+  display: inline-block;
+}

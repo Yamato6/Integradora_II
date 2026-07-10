@@ -1,32 +1,21 @@
-import express from "express";
-import dotenv from "dotenv";
-import plcRoutes from "./Routes/plcRoutes.js";
+import express from 'express'
+import process from 'node:process'
+import { healthController, futureApiOneController, futureApiTwoController } from './controller.js'
 
-dotenv.config();
+const app = express()
 
-const app = express();
+app.use(express.json())
 
-app.use(express.json());
+app.get('/api/health', healthController)
+app.get('/api/api-one', futureApiOneController)
+app.get('/api/api-two', futureApiTwoController)
 
-app.use("/api/plc", plcRoutes);
+app.use((error, req, res) => {
+    res.status(500).json({ message: error.message || 'Internal server error' })
+})
 
-app.get("/api/test", (req, res) => {
-    res.json({
-        message: "Hola desde Express"
-    });
-});
-
-app.get("/api/plc", async (req, res) => {
-    try {
-        const [rows] = await db.query("SELECT * FROM plac_data");
-        res.json(rows);
-    } catch (error) {
-        res.status(500).json({ error: "Error al consultar la base de datos" });
-    }
-});
-
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3001
 
 app.listen(PORT, () => {
-    console.log(`Servidor escuchando en http://localhost:${PORT}`);
-});
+    console.log(`Servidor escuchando en http://localhost:${PORT}`)
+})

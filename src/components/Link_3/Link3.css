@@ -1,0 +1,17 @@
+.link-3 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 0 16px;
+  border-radius: 999px;
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  text-decoration: none;
+  font: inherit;
+  font-weight: 700;
+}
+
+.link-3__text {
+  display: inline-block;
+}
