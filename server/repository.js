@@ -4,8 +4,8 @@ import process from 'node:process'
 const pool = mysql.createPool({
 	host: process.env.MYSQL_HOST || 'localhost',
 	user: process.env.MYSQL_USER || 'root',
-	password: process.env.MYSQL_PASSWORD || '',
-	database: process.env.MYSQL_DATABASE || 'integradora_ii',
+	password: process.env.MYSQL_PASSWORD || 'Windows8Buen@M',
+	database: process.env.MYSQL_DATABASE || 'sys',
 	waitForConnections: true,
 	connectionLimit: 10,
 })

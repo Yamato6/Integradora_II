@@ -1,0 +1,40 @@
+/* Badge1.css — usa variables de variables.css (global) */
+
+.badge-1 {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-body);
+  font-size: var(--caption);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+.badge-1--primary {
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+.badge-1--success {
+  background: var(--color-success-light);
+  color: var(--color-success);
+}
+
+.badge-1--warning {
+  background: var(--color-warning-light);
+  color: var(--color-warning);
+}
+
+.badge-1--error {
+  background: var(--color-error-light);
+  color: var(--color-error);
+}
+
+.badge-1--dark {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}

@@ -1,0 +1,105 @@
+.nav-landing-1 {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--color-header);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.nav-landing-1__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+  width: min(1280px, calc(100% - 64px));
+  margin-inline: auto;
+  gap: var(--space-4);
+}
+
+/* Brand / Logo */
+.nav-landing-1__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.nav-landing-1__brand-text {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+}
+
+.nav-landing-1__version {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  background: rgba(0, 123, 255, 0.14);
+  border: 1px solid rgba(0, 123, 255, 0.3);
+  border-radius: var(--radius-pill);
+  padding: 2px 9px;
+}
+
+/* Nav links */
+.nav-landing-1__links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.nav-landing-1__link {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.65);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.nav-landing-1__link:hover {
+  color: #ffffff;
+}
+
+/* CTA Button */
+.nav-landing-1__cta {
+  flex-shrink: 0;
+  padding: 10px 22px;
+  background: var(--color-primary);
+  color: #fff;
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.nav-landing-1__cta:hover {
+  transform: scale(1.04);
+  box-shadow: var(--glow-primary);
+}
+
+/* Responsive: ocultar links en móvil */
+@media (max-width: 768px) {
+  .nav-landing-1__links {
+    display: none;
+  }
+
+  .nav-landing-1__inner {
+    width: calc(100% - 40px);
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-landing-1__inner {
+    width: calc(100% - 32px);
+  }
+}
