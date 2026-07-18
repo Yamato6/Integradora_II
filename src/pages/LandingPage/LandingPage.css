@@ -8,6 +8,10 @@
   min-height: 100vh;
 }
 
+.landing-page section {
+  margin-bottom: 0;
+}
+
 /* ── Barra de estadísticas ──────────────────────────────────────── */
 .landing-stats-bar {
   display: flex;
