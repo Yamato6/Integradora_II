@@ -7,10 +7,15 @@ import SectionHeader1 from '../../components/SectionHeader_1/SectionHeader1'
 import ServiceCard1  from '../../components/ServiceCard_1/ServiceCard1'
 import FeatureRow1   from '../../components/FeatureRow_1/FeatureRow1'
 import Img3         from '../../components/Img_3/Img3'
+import MemberCard   from '../../components/MemberCard/MemberCard'
 import TechBadge1    from '../../components/TechBadge_1/TechBadge1'
 import CTABanner1    from '../../components/CTABanner_1/CTABanner1'
 import Divider1      from '../../components/Divider_1/Divider1'
 import introIllustration from '../../assets/api.jpg'
+import memberImage1 from '../../assets/abran.jpg'
+import memberImage2 from '../../assets/paco.jpg'
+import memberImage3 from '../../assets/angel1.jpg'
+import memberImage4 from '../../assets/angel2.jpg'
 
 /* ── Datos de contenido ─────────────────────────────────────────── */
 
@@ -104,6 +109,61 @@ const INTRO_HIGHLIGHTS = [
   },
 ]
 
+const MEMBERS = [
+  {
+    id: 1,
+    member_name: 'Jeshua Abraham Pérez Díaz',
+    member_role: 'Project Leader / Backend Developer',
+    member_image: memberImage1,
+    member_responsibilities: [
+      'Coordinate the overall development process.',
+      'Design and implement the backend architecture.',
+      'Integrate frontend, backend, and database components.',
+      'Support all development areas and ensure the project works as a complete system.',
+    ],
+    member_fun_facts: 'Enjoys visual novels and story-driven games.',
+  },
+  {
+    id: 2,
+    member_name: 'Angel Daniel Becerra Calderon',
+    member_role: 'Software Quality & Metrics',
+    member_image: memberImage2,
+    member_responsibilities: [
+      'Define software quality standards throughout the project.',
+      'Verify that implemented features meet project requirements.',
+      'Support testing, validation, and documentation activities.',
+      'Monitor project metrics and contribute to continuous improvements.',
+    ],
+    member_fun_facts: 'A fan of the Mushoku Epstein series and Peak-on',
+  },
+  {
+    id: 3,
+    member_name: 'Angel Gabriel Barrera Rangel',
+    member_role: 'Frontend Developer',
+    member_image: memberImage3,
+    member_responsibilities: [
+      'Design and develop the user interface.',
+      'Implement responsive layouts and interactive components.',
+      'Maintain visual consistency across the platform.',
+      'Improve the overall user experience through modern frontend practices.',
+    ],
+    member_fun_facts: 'Creator of several popular Persona game guides on Steam.',
+  },
+  {
+    id: 4,
+    member_name: 'Francisco Alejandro Garcia Vela',
+    member_role: 'Database Developer',
+    member_image: memberImage4,
+    member_responsibilities: [
+      'Design and maintain the relational database.',
+      'Create tables, relationships, and database structures.',
+      'Ensure data integrity and efficient data storage.',
+      'Support backend integration with the database.',
+    ],
+    member_fun_facts: 'Former streamer and gacha game enthusiast.',
+  },
+]
+
 /* ── Componente ─────────────────────────────────────────────────── */
 
 function LandingPage() {
@@ -169,6 +229,35 @@ function LandingPage() {
           </div>
         </div>
       </section>
+
+      {/* ── Sección de miembros ── */}
+      <div className="landing-section landing-members-section" id="miembros">
+        <div className="container">
+          <div className="landing-members-content">
+            <SectionHeader1
+              overline_text="Miembros del Proyecto"
+              title_text="The team behind Integral System"
+              subtitle_text="Cada integrante aporta una parte concreta del flujo de trabajo: liderazgo, calidad, frontend y base de datos. La sección concentra su perfil esencial y expande la información al interactuar con cada tarjeta."
+              align="center"
+            />
+
+
+
+            <div className="landing-members-grid">
+              {MEMBERS.map((member) => (
+                <MemberCard
+                  key={member.id}
+                  member_name={member.member_name}
+                  member_role={member.member_role}
+                  member_image={member.member_image}
+                  member_responsibilities={member.member_responsibilities}
+                  member_fun_facts={member.member_fun_facts}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
 
       <Divider1 />
 

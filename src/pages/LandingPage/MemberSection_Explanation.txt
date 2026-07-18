@@ -1,0 +1,13 @@
+Se eligió una estructura de componentes porque la sección de miembros comparte el mismo tipo de lectura que el resto de la landing: información resumida en la vista principal y ampliación contextual solo cuando el usuario lo solicita. `MemberCard` encapsula esa interacción para que `LandingPage.jsx` se mantenga como un contenedor de datos y composición, no como un archivo con demasiada lógica visual.
+
+El patrón de array + `map()` se usó porque los miembros forman un conjunto homogéneo de entidades con la misma estructura de datos. Esto reduce repetición, facilita mantenimiento y permite escalar la sección con más integrantes sin reescribir el JSX ni duplicar tarjetas manualmente.
+
+La funcionalidad modal se implementó al hacer click para respetar dos necesidades al mismo tiempo: mantener una vista compacta en la landing y ofrecer detalle suficiente cuando el usuario quiere profundizar. En la lista solo se muestran imagen, nombre y rol, mientras que el modal concentra responsabilidades y fun facts sin recargar la sección principal.
+
+En lo visual y UX, la sección reutiliza el patrón de dos columnas ya presente en la introducción para conservar coherencia. La columna izquierda comunica contexto; la derecha presenta la grilla de tarjetas. Las tarjetas usan bordes suaves, sombras y un hover sutil para alinearse con el lenguaje visual del proyecto y a la vez señalar que son elementos interactivos.
+
+Los datos se organizaron con nombres explícitos y consistentes para dejar claro qué pertenece a la vista resumida y qué pertenece al detalle. Esa separación ayuda a la legibilidad del componente y evita mezclar información de presentación con contenido de interacción.
+
+Desde el punto de vista técnico, el modal se controla localmente dentro de `MemberCard` para evitar elevar estado innecesariamente a la página. También se añadió cierre con Escape y cierre por clic en el fondo para mejorar accesibilidad y comportamiento esperado en interfaces modales.
+
+Nota: las imágenes deben existir en `src/assets/` con los nombres `abran.jpg`, `paco.jpg`, `angel1.jpg` y `angel2.jpg` para que el bundler pueda resolverlas correctamente.
