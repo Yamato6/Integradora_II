@@ -6,9 +6,11 @@ import StatItem1     from '../../components/StatItem_1/StatItem1'
 import SectionHeader1 from '../../components/SectionHeader_1/SectionHeader1'
 import ServiceCard1  from '../../components/ServiceCard_1/ServiceCard1'
 import FeatureRow1   from '../../components/FeatureRow_1/FeatureRow1'
+import Img3         from '../../components/Img_3/Img3'
 import TechBadge1    from '../../components/TechBadge_1/TechBadge1'
 import CTABanner1    from '../../components/CTABanner_1/CTABanner1'
 import Divider1      from '../../components/Divider_1/Divider1'
+import introIllustration from '../../assets/api.jpg'
 
 /* ── Datos de contenido ─────────────────────────────────────────── */
 
@@ -74,6 +76,34 @@ const TECHS = [
   { tech_name: 'REST APIs',     tech_icon: '🔌' },
 ]
 
+const INTRO_HIGHLIGHTS = [
+  {
+    feature_icon:  '💻',
+    feature_title: 'Modern Full-Stack Architecture',
+    feature_text:  'Integral System conecta React, Node.js, Express y MySQL en una arquitectura coherente que separa interfaz, servidor y datos para facilitar el mantenimiento.',
+  },
+  {
+    feature_icon:  '📱',
+    feature_title: 'Responsive User Interface',
+    feature_text:  'La experiencia se adapta a pantallas de escritorio, tablet y móvil para que el acceso al sistema siga siendo claro, legible y consistente en cualquier dispositivo.',
+  },
+  {
+    feature_icon:  '🔗',
+    feature_title: 'Backend & Database Integration',
+    feature_text:  'El frontend dialoga con un backend intermediario que coordina las rutas REST, administra la persistencia y mantiene la comunicación con la base de datos MySQL.',
+  },
+  {
+    feature_icon:  '🌐',
+    feature_title: 'External API Connectivity',
+    feature_text:  'Las integraciones con servicios externos amplían el alcance funcional del sistema sin romper su estructura modular ni comprometer el flujo de interacción.',
+  },
+  {
+    feature_icon:  '⚡',
+    feature_title: 'Scalable and Modular Design',
+    feature_text:  'Cada módulo se mantiene independiente para que nuevas pestañas, servicios o mejoras puedan incorporarse sin rehacer la experiencia principal.',
+  },
+]
+
 /* ── Componente ─────────────────────────────────────────────────── */
 
 function LandingPage() {
@@ -91,6 +121,56 @@ function LandingPage() {
         btn1_text="Explorar Sistema →"
         btn2_text="Ver APIs"
       />
+
+      {/* ── Introducción ── */}
+      <section className="landing-section landing-section--surface" id="introduccion">
+        <div className="container">
+          <div className="landing-features-layout" style={{ alignItems: 'stretch' }}>
+            <div className="landing-features-left" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+              <SectionHeader1
+                overline_text="Introducción del Proyecto"
+                title_text="Welcome to Integral System"
+                subtitle_text="Integral System es una aplicación web modular desarrollada para el proyecto Integradora II de la Universidad Tecnológica El Retoño, construida con React, Node.js, MySQL y APIs externas para unir interfaz responsiva, comunicación con backend y gestión de datos en una sola experiencia."
+                align="left"
+                style_vars={{ marginBottom: 0 }}
+              />
+
+              <p className="section-header-1__subtitle" style={{ marginTop: 0 }}>
+                La propuesta reúne componentes independientes, consumo de servicios externos y persistencia de información para mostrar cómo una arquitectura bien separada mejora el mantenimiento, la escalabilidad y la claridad de una plataforma real.
+              </p>
+
+              <div style={{ flex: 1, minHeight: '280px', display: 'flex' }}>
+                <Img3
+                  image_src={introIllustration}
+                  image_alt="Ilustración abstracta del sistema Integral System"
+                  style_vars={{ height: '100%', width: '100%' }}
+                  image_style_vars={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                />
+              </div>
+            </div>
+
+            <div className="landing-features-list">
+              <SectionHeader1
+                overline_text="Main Highlights"
+                title_text="Ideas that define the platform"
+                subtitle_text="Estos puntos resumen la arquitectura, la experiencia visual y la forma en que el sistema conecta servicios, datos y presentación."
+                align="left"
+              />
+
+              {INTRO_HIGHLIGHTS.map((feature, i) => (
+                <FeatureRow1
+                  key={i}
+                  feature_icon={feature.feature_icon}
+                  feature_title={feature.feature_title}
+                  feature_text={feature.feature_text}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Divider1 />
 
       {/* ── Barra de estadísticas ── */}
       <div className="landing-stats-bar">

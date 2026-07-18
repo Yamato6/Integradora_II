@@ -1,0 +1,41 @@
+Introduction Section Design Rationale
+
+1. Component choices
+
+- SectionHeader1 was used to frame the section because it already provides the page's established heading hierarchy, overline, and subtitle pattern. This keeps the Introduction visually aligned with the rest of LandingPage.jsx and makes the new block feel native to the project.
+- FeatureRow1 was used for the five highlights because it presents one idea at a time with an icon, title, and description. That structure is ideal for summarizing the platform's architecture without overwhelming the reader.
+- Img3 was used for the visual area because it is one of the project's existing image primitives and lets the introduction show a reusable project asset without introducing a new component.
+- Divider1 was used after the new section to preserve the page's rhythm and clearly separate the introduction from the stats bar. This follows the same separation pattern already used elsewhere in the landing page.
+- The existing layout classes landing-section, landing-section--surface, container, landing-features-layout, landing-features-left, and landing-features-list were reused so the section inherits the page's responsive structure without adding new CSS.
+
+2. Why each element is included
+
+- The title "Welcome to Integral System" works as a direct entry point into the project narrative. It gives the page a welcoming transition from the hero area into the explanation of what the platform is.
+- The description explains the project in one compact paragraph while still covering the required technical context: the Integrative II project, Universidad Tecnológica El Retoño, React, Node.js, MySQL, external APIs, responsive design, backend communication, and database management. This balances completeness with readability.
+- The image replaces the earlier button row so the introduction feels more visual and less crowded. Using the existing hero illustration also keeps the page consistent with the project's current visual language.
+- The Main Highlights subsection condenses the project's identity into five scannable points. Each point uses an emoji icon so the user can scan the section quickly and understand the theme before reading the supporting text.
+
+3. Design reasoning
+
+- The section uses a two-column layout because the content naturally splits into two tasks: explanation on the left and condensed highlights on the right. This creates a clear visual hierarchy and keeps the introduction from becoming a long block of text.
+- The left column leads with the main heading, a descriptive paragraph, and a visual illustration. That order follows a simple communication flow: explain the project, then reinforce it visually.
+- The right column groups the five highlight rows under a second SectionHeader1. This makes the "Main Highlights" area look like a distinct subsection instead of a long list, which improves readability and supports scanning.
+- The introduction section uses the surface variant to distinguish it from the hero and the stats bar while staying within the page's established palette and spacing system.
+
+4. Integration rationale
+
+- The new section was inserted immediately after HeroBanner1 because the hero should provide the first impression and the introduction should immediately clarify the platform's purpose.
+- Divider1 was placed after the introduction so the stats bar starts as a separate content block. This keeps the top of the page readable and avoids blending the project overview with the numerical summary.
+- The section sits before the existing stats, modules, features, and technology content so the user gets context first, then detail. That ordering supports a top-down narrative: what the system is, what it contains, how it works, and what technologies power it.
+
+5. Responsive and modular justification
+
+- Reusing landing-features-layout gives the introduction a responsive two-column structure that collapses naturally on smaller screens, matching the behavior already defined for the page's feature section.
+- FeatureRow1 keeps each highlight isolated and modular, which makes the content easy to reorder, replace, or expand later without changing the surrounding layout.
+- Img3 keeps the image handling encapsulated in an existing project component, and the added image-style prop allows the illustration to fill its container height while preserving reuse.
+- The section respects the existing component architecture by passing content through props and storing repeatable content in arrays. That approach keeps the page maintainable and consistent with the rest of the landing page implementation.
+
+6. Summary
+
+- This Introduction section gives the landing page a clear project overview, actionable navigation, and a structured summary of the platform's main ideas.
+- The design stays modular, responsive, and visually consistent because it is built entirely from existing project components and existing page layout classes.
