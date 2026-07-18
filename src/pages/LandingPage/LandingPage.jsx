@@ -139,12 +139,12 @@ function LandingPage() {
                 La propuesta reúne componentes independientes, consumo de servicios externos y persistencia de información para mostrar cómo una arquitectura bien separada mejora el mantenimiento, la escalabilidad y la claridad de una plataforma real.
               </p>
 
-              <div style={{ flex: 1, minHeight: '280px', display: 'flex' }}>
+              <div style={{ width: '100%', aspectRatio: '16 / 10', display: 'flex' }}>
                 <Img3
                   image_src={introIllustration}
                   image_alt="Ilustración abstracta del sistema Integral System"
-                  style_vars={{ height: '100%', width: '100%' }}
-                  image_style_vars={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  style_vars={{ height: '100%', width: '100%', border: 'none' }}
+                  image_style_vars={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'center' }}
                 />
               </div>
             </div>
