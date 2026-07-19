@@ -2,7 +2,7 @@ import './NavLanding1.css'
 
 function NavLanding1({
   brand_text = 'INTEGRAL_SYSTEM',
-  version_text = 'V1.0',
+  version_text = '',
   link1_text = 'Inicio',
   link2_text = 'Servicios',
   link3_text = 'Tecnología',

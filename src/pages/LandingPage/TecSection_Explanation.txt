@@ -1,0 +1,9 @@
+La sección de Tecnologías se estructuró como un bloque independiente dentro de `LandingPage.jsx` para mantener el mismo orden narrativo de la página: primero se presenta el proyecto, luego el equipo y después las tecnologías que lo hacen posible. Esa secuencia evita saltos visuales y ayuda a que la landing se lea como una historia continua.
+
+Se reutilizó la misma estructura de la sección de miembros porque ya resuelve bien el objetivo principal: un encabezado centrado y una grilla homogénea de tarjetas debajo. Reusar esa base reduce código repetido, mantiene consistencia visual y hace que la nueva sección se perciba como parte del mismo sistema de diseño.
+
+El grid layout se eligió porque las cuatro tecnologías tienen el mismo peso visual y la misma jerarquía de contenido. Una grilla de cuatro columnas permite comparar las tecnologías de un vistazo en escritorio y adaptarse con facilidad en tablet y móvil sin reescribir la lógica de presentación.
+
+`TecCard` se diseñó como un componente simple y reutilizable con solo el contenido esencial: nombre y descripción. No se añadió interacción extra porque en esta sección el objetivo es informar, no expandir contenido bajo demanda. Eso mantiene la interfaz más ligera y evita competir con la sección de miembros, que sí usa detalle por modal.
+
+La sección se integró justo debajo de miembros y antes del footer para cerrar la landing con una lectura técnica clara: equipo, herramientas y cierre del proyecto. En términos de UX, funciona como una síntesis final del stack sin interrumpir el recorrido principal de la página.
