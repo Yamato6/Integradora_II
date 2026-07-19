@@ -125,7 +125,7 @@ const TECHNOLOGIES = [
 
 function LandingPage() {
   return (
-    <div className="landing-page">
+    <div className="landing-page" id="inicio">
 
       {/* ── Navegación ── */}
       <NavLanding1 />
@@ -135,8 +135,6 @@ function LandingPage() {
         badge_text="Proyecto Integrador UTR 2026"
         title_text="INTEGRAL_SYSTEM"
         subtitle_text="Plataforma web modular que integra servicios externos y supervisa el estado del sistema dentro de una red local controlada."
-        btn1_text="Explorar Sistema →"
-        btn2_text="Ver APIs"
       />
 
       {/* ── Introducción ── */}

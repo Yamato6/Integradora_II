@@ -21,26 +21,28 @@ function HeroBanner1({
         {subtitle_text && (
           <p className="hero-banner-1__subtitle">{subtitle_text}</p>
         )}
-        <div className="hero-banner-1__actions">
-          {btn1_text && (
-            <button
-              type="button"
-              className="hero-banner-1__btn hero-banner-1__btn--primary"
-              onClick={btn1_onClick}
-            >
-              {btn1_text}
-            </button>
-          )}
-          {btn2_text && (
-            <button
-              type="button"
-              className="hero-banner-1__btn hero-banner-1__btn--outline"
-              onClick={btn2_onClick}
-            >
-              {btn2_text}
-            </button>
-          )}
-        </div>
+        {(btn1_text || btn2_text) && (
+          <div className="hero-banner-1__actions">
+            {btn1_text && (
+              <button
+                type="button"
+                className="hero-banner-1__btn hero-banner-1__btn--primary"
+                onClick={btn1_onClick}
+              >
+                {btn1_text}
+              </button>
+            )}
+            {btn2_text && (
+              <button
+                type="button"
+                className="hero-banner-1__btn hero-banner-1__btn--outline"
+                onClick={btn2_onClick}
+              >
+                {btn2_text}
+              </button>
+            )}
+          </div>
+        )}
       </div>
     </section>
   )
