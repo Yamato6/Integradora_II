@@ -241,7 +241,7 @@ function LandingPage() {
       {/* ── Footer ── */}
       <footer className="landing-footer">
         <p className="landing-footer__text">
-          <strong>INTEGRAL_SYSTEM</strong> — V1.0-ALPHA&nbsp;&nbsp;·&nbsp;&nbsp;Proyecto Académico · UTRE 2026
+          <strong>INTEGRAL_SYSTEM</strong> — Proyecto Integrador · UTR 2026
         </p>
       </footer>
 
